@@ -1,0 +1,5 @@
+*.o
+./tinyshell
+test
+test1
+.idea
