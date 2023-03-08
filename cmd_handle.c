@@ -1,5 +1,6 @@
 #include "cmd_handle.h"
 #include "cmd_cp.h"
+#include "cmd_ls.h"
 int cmd_execute(char *cmd_str)
 {
   cmd_t command;
@@ -66,6 +67,7 @@ int cmd_dispatch(cmd_t *pcmd)
   if (pcmd ==NULL) return -1;
   if (strcmp(pcmd->cmd_name,"ls") == 0) {
 //    调用ls 命令处理模块
+      cmd_ls_execute(pcmd);
 #ifdef DEBUG
     printf("ls handle.\n");
 #endif
